@@ -1,0 +1,9 @@
+1-	Ejecutar control_experto.m
+2-	En sistema_experto.m, dentro del bucle "while ~salir":
+		-	Añadir o editar reglas para el tiempo de subida y la sobreelongacion
+		-	Editar en "Si se cumplen las especificaciones, entonces salir":
+			Poner unas especificaciones que cumplan un abanico grande de posibles condiciones
+3-La ganancia en las reglas (por ejemplo en pid(1)=pid(1)+0.5) da igual que número sean, lo que he descubierto yo es que una debería ser par y otra impar (por ejemplo la positiva ser 0.6 y la neg -0.5) y que mas o menos se lleven solo un decimal de diferencia para que puedan alcanzar cualquier número. Podeis copiar estas tal cual (cuidado con que se den cuenta)
+Además da igual que el número sea 0.5 o que ssea 10.5, solo influye en cuantas iteraciones realizará, a mayor número mayor número de iteraciones.
+
+La práctica es bastante simple en general, no tiene más complicación de lo que se ve a simple vista.

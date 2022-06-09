@@ -1,0 +1,51 @@
+[System]
+Name='posibleFuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Error'
+Range=[-1 1]
+NumMFs=2
+MF1='n':'trapmf',[-2 -2 -0.7 0.38]
+MF2='p':'trapmf',[-0.38 0.7 2 2]
+
+[Input2]
+Name='Integral_del_error'
+Range=[-4.3 4.3]
+NumMFs=2
+MF1='n':'trapmf',[-8.6 -8.6 -4 3]
+MF2='p':'trapmf',[-3 4 8.6 8.6]
+
+[Input3]
+Name='derivada_del_error'
+Range=[-0.4 0.4]
+NumMFs=2
+MF1='n':'trapmf',[-0.8 -0.8 -0.28 0.18]
+MF2='p':'trapmf',[-0.19 0.28 0.8 0.8]
+
+[Output1]
+Name='control'
+Range=[-0.32 0.32]
+NumMFs=3
+MF1='negativo':'trapmf',[-0.32 -0.32 -0.28 0.28]
+MF2='zero':'trimf',[-0.15 0 0.15]
+MF3='p':'trapmf',[-0.28 0.28 0.32 0.32]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 1 2, 3 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 3 (1) : 1

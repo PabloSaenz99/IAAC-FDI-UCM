@@ -1,0 +1,51 @@
+[System]
+Name='Fuzzy2'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-1 1]
+NumMFs=2
+MF1='neg':'trapmf',[-1 -1 -0.75 0.75]
+MF2='pos':'trapmf',[-0.75 0.75 1 1]
+
+[Input2]
+Name='input2'
+Range=[-1 1]
+NumMFs=2
+MF1='neg':'trapmf',[-1 -1 -0.75 0.75]
+MF2='pos':'trapmf',[-0.75 0.75 1 1]
+
+[Input3]
+Name='input3'
+Range=[-1 1]
+NumMFs=2
+MF1='neg':'trapmf',[-1 -1 -0.75 0.75]
+MF2='pos':'trapmf',[-0.75 0.75 1 1]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=3
+MF1='neg':'trimf',[-0.40962441314554 0.00704225352112677 0.423708920187794]
+MF2='med':'trimf',[0.1 0.5 0.9]
+MF3='pos':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 1 2, 3 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 3 (1) : 1

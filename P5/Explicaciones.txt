@@ -1,0 +1,26 @@
+red2 y red_final son las redes finales entrenadas que funcionan (son iguales, esta 2 veces por backup).
+No han sido entrenadas con movimientos hacia atras, es decir, cada movimiento de cada pieza has sido realizado solo en una dir(brazo solo der, hombro solo arriba, codo solo abajo y muñeca solo arriba)
+	Los datos exportados de dichos motimientos son datos3.mat
+	
+Resumen práctica:
+	Crear entrenamiento
+		1-Abrir brazo y realizar movimientos y extportarlos al workspace (o guardarlos como archivo)
+		2-Seleccionar los datos de efector como input quitando la línea final
+		3 Seleccionar los datos de angulo como salida (cada columna es la salida de una de las partes)
+			Para punto 2 y 3 se puede usar el archivo crear_input_output.mat
+	Crear redes
+		1-Abrir nntool (quiza hay que instalarlo) (ignorar los warnings de version)
+		2-Importar la entrada (comun a todas las redes) y las salidas (una distinta por red)
+		3-Crear las redes (perceptron multicapa no existe, yo usé la de xor) con neuronas por capa (las mias fueron las mostradas, primer num capa 1 y segundo capa 2)):
+			Base	10-10
+			Hombro	14-12
+			Codo	20-16
+			Muñeca	25-25
+		4-Entrenar las redes desde la pestaña train (al abrir una red), ver que en la grafica de performance ver que todos los valores son inferiores a 10^-3 para que mas o menos funcione (el valor de test da igual el valor creo)
+		5-Exportar las redes al workspace o a un archivo
+	Testear
+		1-Abrir el brazo
+		2-Importar las redes
+		3-Darle a movimiento automático. en pos final poner o la pos final removida o una de las posiciones del recorrido (cogerla de datos.angulo)
+		4-Rezar porque no explote
+			Si da un error toca reentrenar la red

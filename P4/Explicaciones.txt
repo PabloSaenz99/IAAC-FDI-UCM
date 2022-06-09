@@ -1,0 +1,17 @@
+1-	Crear 3 inputs (ponerles los nombres)
+	El rango es de -1 a 1.
+2-	Para cada input abrirla y cambiarle el tipo a trampmf.
+Comprobar que el rango va de -1 a 1.
+		Poner los parámetros que queráis (litealmente los que queráis, va a funcionar igual)
+		Seguir un orden para las variables (las líneas), por ejemplo yo he puesto siempre primero la neg (va de 1 a 0) y luego la pos (va de 0 a 1)
+3-	Salida
+		Yo he puesto 3 variables, neg, med (intermedia) y pos (el orden es relativamente importante creo, mejor hacedlo igual)
+			neg y pos son trapmf con rangos de 0 a 1.
+			med es trimf conn rango de 0 a 1 también.
+4- Reglas Fuzzy
+		He puesto exactamente las mismas que las del guión, se pueden buscar otras en google pero no merece la pena.
+
+El PID se puede poner lo que se quiera, yo probé unas 15 combinaciones distintas de bloques y todas daban exactamente el mismo resultado.
+	Poniendo de ganacia 6 daba igual que poniendo 47, lo único que hay que cambiar es la ganancia del medio para ajustar el error (multiplica la salida por el num que tenga)
+	
+Resumen: da igual lo que se ponga, con ajustar bien la ganancia del modelo antes de la salida (Gain3) vale.

@@ -1,0 +1,18 @@
+Optimtool solo funciona en la version de 2021 o anterior
+Para abrirlo en posteriores abrir un live editor, escribir Optimize y ejecutar (el Genetic Algorithm solo estará disponible si tienes instalados los add ons de  Global Optimization Toolbox y  Optimization Toolbox (sí, los dos)) reiniciar matlab si se caban de instalar los paquetes
+
+Solver: GA - Genetic Algorithm
+
+Funcion fitness:
+	*@funcion (IAE, ITAE...)
+	Numero de variables: 3
+
+Initial range: intervalos del pid que sacamos en la p2
+Seleccion: ruelta (en realidad se puede dejar el que quieras)
+Mutacion: uniforme o la de por defecto (Constranint dependent)
+	Si eliges uniforme dejar el valor bajo
+Crossover: single point o la de por defecto (Constranint dependent)
+Plot functions:
+	Best Fitness
+	Best Individual
+	(Si se quieren mas pues mas, estas dan solo información)
